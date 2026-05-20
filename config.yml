@@ -18,6 +18,10 @@ params:
     Title: "Welcome to Britney's Blog"
     Content: "PM researching agent-driven discovery. Also: scripts, data pipelines, and overthinking SEO."
 
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/britneyscripts"
+
   assets:
     disableHLJS: true
 
