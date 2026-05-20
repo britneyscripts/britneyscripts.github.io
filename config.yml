@@ -1,0 +1,28 @@
+baseURL: "https://britneyscripts.github.io/"
+title: "Britney's Blog"
+theme: "PaperMod"
+
+pagination:
+  pagerSize: 10
+
+params:
+  env: production
+  defaultTheme: light # Using light mode as default for the requested colors
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  
+  homeInfoParams:
+    Title: "Welcome to Britney's Blog"
+    Content: "Stories, scripts, and tech musings."
+
+  assets:
+    disableHLJS: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
