@@ -8,6 +8,11 @@ pagination:
 params:
   env: production
   defaultTheme: light # Using light mode as default for the requested colors
+  
+  # Global SEO configurations
+  author: "Eva de Paula"
+  description: "PM researching agent-driven discovery, data pipelines, and automation scripts."
+  
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
