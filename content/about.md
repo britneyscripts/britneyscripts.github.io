@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "Eva De Paula (@britneyscripts) — PM researching agent-ready commerce."
+description: "Eva De Paula (@britneyscripts) PM researching agent-ready commerce."
 draft: false
 ---
 
