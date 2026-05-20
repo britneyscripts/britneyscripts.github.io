@@ -14,7 +14,7 @@ Welcome to my new space on the internet! 👋
 
 ### Why "Britney's Blog"?
 
-My Twitter handle is @britneyscripts — a nod to scripting, automation, and yes, a bit of pop culture fun. But you can call me Eva. This space is where Britney Scripts (the tech persona) meets Eva De Paula (the PM researcher). Think of it as my digital lab notebook meets coffee shop rambling.
+My Twitter handle is @britneyscripts a nod to scripting, automation, and yes, a bit of pop culture fun. But you can call me Eva. This space is where Britney Scripts (the tech persona) meets Eva De Paula (the PM researcher). Think of it as my digital lab notebook meets coffee shop rambling.
 
 I'm incredibly excited to launch **Britney's Blog**, a dedicated place where I'll be sharing:
 
@@ -29,7 +29,7 @@ I don't have money to pay a high-end agent-ecosystem research setup. I just have
 
 I wanted a blog that was fast, secure, and purely static. No JavaScript dependencies, no npm bloat (I guess you read the news), and just pure, blazing-fast HTML served by GitHub Pages.
 
-Hugo hits the sweet spot—it compiles markdown to HTML in milliseconds. Combined with the **PaperMod** theme, it provides a clean, readable layout right out of the box, which I've customized with a warm, earthy color palette. (Antigravity kill it with this text, isn't?)
+Hugo hits the sweet spot it compiles markdown to HTML in milliseconds. Combined with the **PaperMod** theme, it provides a clean, readable layout right out of the box, which I've customized with a warm, earthy color palette. (Antigravity kill it with this text, isn't?)
 
 ### What's Next?
 
