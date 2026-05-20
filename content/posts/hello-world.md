@@ -14,6 +14,8 @@ Welcome to my new space on the internet! 👋
 
 ### Why "Britney's Blog"?
 
+I miss the old internet that forced us to read many articles about a topic. Obviously AI is internalized in my life in a lot of ways but I really miss navigating within an ocean of blogs and deciding to read something new. This blog is kind of a tribute to the old times. It isn’t beautiful and fancy, my idea is just a blog. My blog and I are against AI writing about AI. Is it a metalinguistic blog? Obviously Gemini corrected my English funny mistakes, if you want to know my English level you can interview me for a job to check it by yourself.
+
 My Twitter handle is @britneyscripts a nod to scripting, automation, and yes, a bit of pop culture fun. But you can call me Eva. This space is where Britney Scripts (the tech persona) meets Eva De Paula (the PM researcher). Think of it as my digital lab notebook meets coffee shop rambling.
 
 I'm incredibly excited to launch **Britney's Blog**, a dedicated place where I'll be sharing:
