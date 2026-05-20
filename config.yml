@@ -26,6 +26,8 @@ params:
   socialIcons:
     - name: twitter
       url: "https://twitter.com/britneyscripts"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/eva-de-paula/"
 
   assets:
     disableHLJS: true
