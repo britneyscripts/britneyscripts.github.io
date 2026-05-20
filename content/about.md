@@ -1,24 +1,55 @@
 ---
-title: "About me"
-description: "A little bit about Eva de Paula (aka Britney Scripts)."
-layout: "about"
+title: "About"
+description: "Eva De Paula (@britneyscripts) — PM researching agent-ready commerce."
 draft: false
 ---
 
-Hi, I'm **Eva de Paula**! 👋
+Hi, I'm **Eva De Paula** (aka **@britneyscripts**). 👋
 
-By day, I am a Product Manager deeply immersed in researching **agent-driven discovery**, data pipelines, and automation. By night (and on Twitter), I go by **@britneyscripts**—a persona born out of a love for automation scripts, tech, and a sprinkle of pop culture fun.
+I'm a **Senior Product Manager** with 8+ years leading e-commerce products across Latin America. Right now, I'm researching **agent-driven discovery** for my Data Science MBA at USP specifically, how AI agents evaluate and recommend products.
 
-### What is this space?
+On Twitter/X, I'm @britneyscripts. The name stuck after years of writing automation scripts and realizing I needed a handle that didn't take itself too seriously.
 
-This blog serves as my digital lab notebook. It's where I document:
-- My latest findings in agentic AI.
-- Automation scripts that save me hours of work.
-- The intersection of product management and the evolving tech ecosystem.
+---
 
-### My Background
-I believe in making the digital world not only highly functional but also beautiful. Whether I'm configuring a static site generator or architecting a new discovery pipeline, I approach it with the mindset of a researcher and the eye of a designer.
+### What I'm working on
 
-When I'm not screaming in despair about the noise in the AI universe (kidding... mostly), you can find me testing out new tools with my USP student account or writing bash scripts while drinking way too much coffee.
+**ghostprod** (soon rebranding to **Agent-Ready**): an open-source framework that measures how technically ready e-commerce product pages are for AI agent discovery. Three dimensions: performance (Core Web Vitals), structured data (Schema.org), and content parseability (NLP).
 
-Feel free to connect with me on Twitter [@britneyscripts](https://twitter.com/britneyscripts)!
+It's my MBA thesis instrument. It's also the answer to a question nobody was asking yet: *when agents replace search bars, which e-commerce sites disappear first?*
+
+---
+
+### What you'll find here
+
+- Research notes on agentic commerce, UCP, and the protocols reshaping discovery
+- Technical breakdowns (Python pipelines, BigQuery, GCP)
+- Honest takes on what it's like to be a PM navigating a field that didn't exist six months ago
+- Occasional rants about npm security incidents and ATS parsers reading "Python" as my first name
+
+---
+
+### The stack I'm working with
+
+I don't have funding for enterprise-grade research infrastructure. I have: **Antigravity, Cursor, Gemini, Google AI Studio, Google Cloud credits, BigQuery, Dataform, Python everywhere and a USP student account.**
+
+It's enough.
+
+*But if you have some budget and want to collaborate on this research — let's talk.*
+
+---
+
+### Why this blog exists
+
+I needed a space outside **LinkedIn's** and Substack's closed gardens. Somewhere I could publish **indexed, searchable content** that appears when someone Googles "agent readiness" or "SEO for AI agents."
+
+Hugo + GitHub Pages = fast, static, no npm dependencies (if you read the news, you know why that matters).
+
+---
+
+**Connect:**
+- **Twitter/X:** [@britneyscripts](https://twitter.com/britneyscripts)
+- **LinkedIn:** [Eva De Paula](https://linkedin.com/in/eva-de-paula)
+- **GitHub:** [@britneyscripts](https://github.com/britneyscripts)
+
+Or just read along. Either works. ☕

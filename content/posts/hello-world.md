@@ -38,6 +38,6 @@ Stay tuned for my upcoming post, I'm going to try post something every week, but
 If you want reach me out on twitter @britneyscripts. I almost used "querylatifah" how my username in twitter but I thought Britney is ok. 
 
 
-p.s: I really don't know from where is the image for this post. Sometimes I even asked for antigravity...
+p.s: I really don't know from where is the image for this post. Pretty sure Antigravity found this one. Or maybe it was Gemini. The AI tools are starting to blur together.
 
 *Happy new era of SEO - Discovery - Agents - AI everywhere!*

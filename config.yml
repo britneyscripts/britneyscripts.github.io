@@ -21,7 +21,7 @@ params:
   
   homeInfoParams:
     Title: "Welcome to Britney's Blog"
-    Content: "PM researching agent-driven discovery. Also: scripts, data pipelines, and overthinking SEO."
+    Content: "Senior Product Manager researching agent-readiness in e-commerce. Building real infrastructure, not selling hype. Scripts, data, and figuring out what RAG is (send help)."
 
   socialIcons:
     - name: twitter
