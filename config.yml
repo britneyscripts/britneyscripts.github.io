@@ -16,7 +16,7 @@ params:
   
   homeInfoParams:
     Title: "Welcome to Britney's Blog"
-    Content: "Stories, scripts, and tech musings."
+    Content: "PM researching agent-driven discovery. Also: scripts, data pipelines, and overthinking SEO."
 
   assets:
     disableHLJS: true
