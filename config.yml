@@ -35,3 +35,10 @@ outputs:
     - HTML
     - RSS
     - JSON
+
+menu:
+  main:
+    - identifier: about
+      name: About me
+      url: /about/
+      weight: 10
