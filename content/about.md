@@ -35,7 +35,7 @@ I don't have funding for enterprise-grade research infrastructure. I have: **Ant
 
 It's enough.
 
-*But if you have some budget and want to collaborate on this research — let's talk.*
+*But if you have some budget and want to collaborate on this research. Let's talk.*
 
 ---
 

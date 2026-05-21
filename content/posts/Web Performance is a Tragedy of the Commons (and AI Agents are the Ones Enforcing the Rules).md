@@ -1,5 +1,5 @@
 ---
-title: "Web Performance is a Tragedy of the Commons (and AI Agents are the Ones Enforcing the Rules)"
+title: "Web performance is a tragedy of the commons (and AI agents are the ones enforcing the rules)"
 date: 2026-05-21T10:00:00-03:00
 draft: false
 tags: ["agentic-commerce","agent-readiness", "ai-agents","schema-org","core-web-vitals","ecommerce-seo","product-management"]
