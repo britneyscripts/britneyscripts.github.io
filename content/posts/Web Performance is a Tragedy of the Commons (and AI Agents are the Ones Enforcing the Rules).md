@@ -5,7 +5,7 @@ draft: false
 tags: ["agentic-commerce","agent-readiness", "ai-agents","schema-org","core-web-vitals","ecommerce-seo","product-management"]
 categories: ["Agentic Commerce","Product Management","Research Notes"]
 cover:
-  image: "/images/mario-von-rotz.png"
+  image: "/images/mario-von-rotz.jpg"
   alt: "Playa Maderas, Nicaragua by Mario von Rotz - Unsplash"
   caption: "Playa Maderas, Nicaragua by Mario von Rotz - Unsplash"
 description: "A deep dive into how Google's historical search criteria shape modern AI agents, and why web performance is now a critical agent-readiness metric."
