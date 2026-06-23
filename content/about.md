@@ -22,10 +22,10 @@ It's my MBA thesis instrument. It's also the answer to a question nobody was ask
 
 ### What you'll find here
 
-- Research notes on agentic commerce, UCP, and the protocols reshaping discovery
-- Technical breakdowns (Python pipelines, BigQuery, GCP)
-- Honest takes on what it's like to be a PM navigating a field that didn't exist six months ago
-- Occasional rants about npm security incidents and ATS parsers reading "Python" as my first name
+- Research notes on agentic commerce, UCP, and the protocols reshaping discovery.
+- Technical breakdowns (Python pipelines, BigQuery, GCP).
+- Honest takes on what it's like to be a PM navigating a field that didn't exist six months ago.
+- Occasional rants about npm security incidents and ATS parsers reading "Python" as my first name. I'm not joking this actually happened.
 
 ---
 
@@ -41,7 +41,7 @@ It's enough.
 
 ### Why this blog exists
 
-I needed a space outside **LinkedIn's** and Substack's closed gardens. Somewhere I could publish **indexed, searchable content** that appears when someone Googles "agent readiness" or "SEO for AI agents."
+I needed a space outside **LinkedIn's** and Substack's closed gardens. Somewhere I could publish **indexed, searchable content** that appears when someone Googles "agent readiness" or "SEO for AI agents." And as I said in my first post this is a tribute to the old days. My old days running a Wordpress on localhost. 
 
 Hugo + GitHub Pages = fast, static, no npm dependencies (if you read the news, you know why that matters).
 
