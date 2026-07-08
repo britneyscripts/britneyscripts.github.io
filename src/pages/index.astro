@@ -1,0 +1,104 @@
+---
+// src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog', ({ data }) => {
+  return data.draft !== true;
+});
+
+const latestPosts = posts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<Layout title="Bê Acosta | AI, Data & E-commerce Infrastructure">
+  <section class="hero" style="margin-bottom: 3rem;">
+    <h1 style="font-family: var(--font-mono); margin-bottom: 1rem; border: none; padding: 0;">
+      👋 hi, i'm bê acosta_
+    </h1>
+    <p style="font-size: 1.25rem; color: var(--text-muted); font-weight: 600;">
+      Senior Technical Product Manager specializing in AI-driven discovery, data pipelines, and e-commerce infrastructure.
+    </p>
+  </section>
+
+  <section class="bio" style="margin-bottom: 3.5rem;">
+    <h2>🧭 The Path Here</h2>
+    <p>
+      I didn't start in product. I didn't even start with a desk. In 2005, I was a <em>camelô</em> (an informal street vendor in Brazil), selling to get by. 
+    </p>
+    <p>
+      From the streets, I moved into client operations, then e-commerce and technical SEO for hostel and retail brands, before leading a B2B platform rollout across 12 LatAm countries. Somewhere along the way, I stopped just writing specs and started directing the build myself—briefing AI coding agents, testing as I go, and owning the architectural decisions (Python, SQL, GCP, Docker).
+    </p>
+    <p>
+      In 2026, after 15 years in Uruguay, I moved back to Brazil and used the transition to go back to school: a <strong>Data Science MBA at USP (ICMC)</strong>, turning a long-standing curiosity about how machines read the web into a formal research project on Agentic Commerce.
+    </p>
+  </section>
+
+  <section class="stack" style="margin-bottom: 3.5rem;">
+    <h2>💻 My Stack</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+      <div style="background-color: var(--bg-secondary); border: 1px solid var(--border); padding: 1.25rem; border-radius: 4px;">
+        <h3 style="font-family: var(--font-mono); color: var(--accent-hover); margin-bottom: 0.5rem; margin-top: 0;">[01] Data & AI</h3>
+        <p style="font-size: 0.95rem; margin: 0; color: var(--text-muted);">
+          Python, SQL, dbt, BigQuery, PostgreSQL, SQLite, Google Gemini AI SDK, spaCy, ChromaDB.
+        </p>
+      </div>
+      <div style="background-color: var(--bg-secondary); border: 1px solid var(--border); padding: 1.25rem; border-radius: 4px;">
+        <h3 style="font-family: var(--font-mono); color: var(--accent-hover); margin-bottom: 0.5rem; margin-top: 0;">[02] Infrastructure</h3>
+        <p style="font-size: 0.95rem; margin: 0; color: var(--text-muted);">
+          GCP (Cloud Run, Firebase), Docker, FastAPI, Git, GitHub Actions.
+        </p>
+      </div>
+      <div style="background-color: var(--bg-secondary); border: 1px solid var(--border); padding: 1.25rem; border-radius: 4px;">
+        <h3 style="font-family: var(--font-mono); color: var(--accent-hover); margin-bottom: 0.5rem; margin-top: 0;">[03] Commerce</h3>
+        <p style="font-size: 0.95rem; margin: 0; color: var(--text-muted);">
+          Technical SEO, Schema.org structure, Adobe Commerce (Magento), VTEX, CrUX API.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="posts-section">
+    <h2>✍️ Latest Articles</h2>
+    {latestPosts.length > 0 ? (
+      <ul class="post-list">
+        {latestPosts.map((post) => (
+          <li class="post-item">
+            <div class="post-meta">
+              {post.data.date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })}
+            </div>
+            <h3 class="post-title">
+              <a href={`${baseUrl}/blog/${post.id}`}>{post.data.title}</a>
+            </h3>
+            <p class="post-excerpt">{post.data.description}</p>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p style="color: var(--text-muted); margin-top: 1.5rem; font-style: italic;">
+        No articles published yet. The first one is coming tomorrow!
+      </p>
+    )}
+    {posts.length > 3 && (
+      <div style="margin-top: 2rem; font-family: var(--font-mono);">
+        <a href={`${baseUrl}/blog`}>View all articles_</a>
+      </div>
+    )}
+  </section>
+
+  <section class="connect" style="margin-top: 4rem; border-top: 1px dashed var(--border); padding-top: 2rem;">
+    <h2>🔗 Connect</h2>
+    <p style="margin-top: 1rem; color: var(--text-muted);">
+      Read my thoughts on Substack: <a href="https://substack.com/@evadepaula" target="_blank">@evadepaula</a><br />
+      Find me on Twitter/X: <a href="https://twitter.com/britneyscripts" target="_blank">@britneyscripts</a><br />
+      Let's align on LinkedIn: <a href="https://www.linkedin.com/" target="_blank">Bettina Acosta de Paula</a>
+    </p>
+  </section>
+</Layout>

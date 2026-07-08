@@ -1,0 +1,49 @@
+---
+// src/pages/blog.astro
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog', ({ data }) => {
+  return data.draft !== true;
+});
+
+// Sort all posts by publication date descending
+const sortedPosts = posts.sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<Layout title="Blog Archive | Bê Acosta" description="All technical articles, research notes, and essays on Agentic Commerce and e-commerce pipelines.">
+  <h1 style="font-family: var(--font-mono); margin-bottom: 2rem; border: none; padding: 0;">
+    📄 archive_
+  </h1>
+  <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem;">
+    A collection of notes, technical write-ups, and structural essays on how AI systems interact with web and e-commerce architectures.
+  </p>
+
+  {sortedPosts.length > 0 ? (
+    <ul class="post-list">
+      {sortedPosts.map((post) => (
+        <li class="post-item">
+          <div class="post-meta">
+            {post.data.date.toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
+            })}
+          </div>
+          <h2 class="post-title" style="border: none; padding: 0; margin: 0;">
+            <a href={`${baseUrl}/blog/${post.id}`}>{post.data.title}</a>
+          </h2>
+          <p class="post-excerpt" style="margin-top: 0.5rem; margin-bottom: 0;">{post.data.description}</p>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p style="color: var(--text-muted); font-style: italic;">
+      No articles published yet. Stay tuned!
+    </p>
+  )}
+</Layout>

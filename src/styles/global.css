@@ -1,0 +1,213 @@
+/* --- Design System & CSS Variables --- */
+:root {
+  --bg-primary: #12141c;       /* Deep Slate Charcoal */
+  --bg-secondary: #1a1d29;     /* Slightly lighter slate for cards/code blocks */
+  --text-primary: #e4e6eb;     /* Soft Off-White (prevents eye strain) */
+  --text-muted: #9ba1b0;       /* Cool gray for dates & tags */
+  --accent: #8c303e;           /* Scorpio Wine Burgundy */
+  --accent-hover: #b83f53;     /* Brighter burgundy for interactive hover states */
+  --border: #2a2e3d;           /* Steel gray for thin terminal-like borders */
+  
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-mono: 'Fira Code', 'Roboto Mono', 'Courier New', Courier, monospace;
+}
+
+/* --- Base Reset & Typography --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  font-size: 1.05rem;
+  padding: 2rem 1.5rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* --- Typography Hierarchy --- */
+h1, h2, h3, h4 {
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* --- Navigation & Links --- */
+header {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-mono);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent-hover);
+}
+
+a {
+  color: var(--accent-hover);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--accent);
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* --- Post Cards & Lists --- */
+.post-list {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.post-item {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-meta {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.post-title {
+  font-size: 1.4rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-title a {
+  color: var(--text-primary);
+  border: none;
+}
+
+.post-title a:hover {
+  color: var(--accent-hover);
+}
+
+.post-excerpt {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+/* --- Markdown Articles --- */
+article {
+  margin-top: 2rem;
+}
+
+article ul, article ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+article li {
+  margin-bottom: 0.5rem;
+}
+
+blockquote {
+  border-left: 4px solid var(--accent);
+  background-color: var(--bg-secondary);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+/* Code styling */
+pre {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+code {
+  font-family: var(--font-mono);
+  background-color: var(--bg-secondary);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+  border: 1px solid var(--border);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  font-size: inherit;
+}
+
+/* Footer */
+footer {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-align: center;
+}
