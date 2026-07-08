@@ -12,7 +12,7 @@ const {
   description = "Senior Technical PM researching agentic commerce, semantic search, and RAG at USP."
 } = Astro.props;
 
-const baseUrl = import.meta.env.BASE_URL; // Resolves base path (/blog) dynamically
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, ''); // Resolves base path dynamically, cleaning trailing slash
 ---
 
 <!DOCTYPE html>
@@ -47,7 +47,7 @@ const baseUrl = import.meta.env.BASE_URL; // Resolves base path (/blog) dynamica
     <div class="container">
       <header>
         <nav>
-          <a href={baseUrl} class="logo">bê_acosta:~$</a>
+          <a href={baseUrl || '/'} class="logo">bê_acosta:~$</a>
           <div class="nav-links">
             <a href={`${baseUrl}/`}>home</a>
             <a href={`${baseUrl}/blog`}>blog</a>
