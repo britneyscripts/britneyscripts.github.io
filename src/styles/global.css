@@ -260,6 +260,42 @@ pre code {
     gap: 3rem;
   }
 }
+/* --- Tag Pills & Filter Containers --- */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--border);
+  align-items: center;
+}
+
+.tags-label {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-right: 0.5rem;
+}
+
+.tag-pill {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tag-pill:hover,
+.tag-pill.active {
+  color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  background-color: transparent;
+}
 
 /* Footer */
 footer {
