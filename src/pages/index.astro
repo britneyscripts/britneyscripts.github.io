@@ -15,17 +15,22 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title="Bê Acosta | AI, Data & E-commerce Infrastructure">
-  <section class="hero" style="margin-bottom: 2.5rem;">
-    <h1 style="font-family: var(--font-mono); margin-bottom: 1rem; border: none; padding: 0;">
-      👋 hi, i'm bê acosta_
-    </h1>
-    <p style="font-size: 1.35rem; color: var(--accent-hover); font-weight: 600; line-height: 1.4; margin-bottom: 1.5rem;">
-      The internet is no longer just for humans. Is your e-commerce ready?
-    </p>
-    <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.5;">
-      Traditional SEO is changing. The digital shelf built for human eyes is now being scanned, parsed, and synthesized by autonomous systems. We are moving into the era of <strong>Agentic Commerce</strong>.
-    </p>
-  </section>
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1 style="font-family: var(--font-mono); margin-bottom: 1rem; border: none; padding: 0; margin-top: 0;">
+        👋 hi, i'm bê acosta_
+      </h1>
+      <p style="font-size: 1.35rem; color: var(--accent-hover); font-weight: 600; line-height: 1.4; margin-bottom: 1.5rem;">
+        The internet is no longer just for humans. Is your e-commerce ready?
+      </p>
+      <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+        Traditional SEO is changing. The digital shelf built for human eyes is now being scanned, parsed, and synthesized by autonomous systems. We are moving into the era of <strong>Agentic Commerce</strong>.
+      </p>
+    </div>
+    <div class="profile-avatar-container">
+      <img src={`${baseUrl}/images/profile.jpg`} alt="Bê Acosta" class="profile-avatar" />
+    </div>
+  </div>
 
   <section class="intro" style="margin-bottom: 3.5rem;">
     <p>
