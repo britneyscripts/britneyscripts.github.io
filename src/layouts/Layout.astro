@@ -10,7 +10,7 @@ interface Props {
 
 const { 
   title = "Bê Acosta | AI, Data & E-commerce Infrastructure", 
-  description = "Senior Technical PM researching agentic commerce, semantic search, and RAG at USP.",
+  description = "A technical blog and digital notebook on Agentic Commerce, semantic search, and e-commerce infrastructure.",
   ogImage = "/images/blog_featured_image.png"
 } = Astro.props;
 
@@ -41,6 +41,7 @@ const ogImageUrl = `${siteUrl}${cleanOgPath}`;
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
+    <meta name="author" content="Bê Acosta" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
