@@ -5,14 +5,21 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  ogImage?: string;
 }
 
 const { 
   title = "Bê Acosta | AI, Data & E-commerce Infrastructure", 
-  description = "Senior Technical PM researching agentic commerce, semantic search, and RAG at USP."
+  description = "Senior Technical PM researching agentic commerce, semantic search, and RAG at USP.",
+  ogImage = "/images/blog_featured_image.png"
 } = Astro.props;
 
 const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, ''); // Resolves base path dynamically, cleaning trailing slash
+
+// Construct absolute URL for OG image (required by social crawlers)
+const siteUrl = Astro.site ? Astro.site.origin : 'https://britneyscripts.github.io';
+const cleanOgPath = ogImage.startsWith('/') ? ogImage : `/${ogImage}`;
+const ogImageUrl = `${siteUrl}${cleanOgPath}`;
 ---
 
 <!DOCTYPE html>
@@ -39,11 +46,13 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, ''); // Resolves base pa
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImageUrl} />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
