@@ -172,6 +172,16 @@ blockquote {
   color: var(--text-primary);
 }
 
+article img, .content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* Code styling */
 pre {
   background-color: var(--bg-secondary) !important;
