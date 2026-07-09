@@ -59,7 +59,10 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, ''); // Resolves base pa
     <div class="container">
       <header>
         <nav>
-          <a href={baseUrl || '/'} class="logo">bê_acosta:~$</a>
+          <a href={baseUrl || '/'} class="logo" style="border: none; display: flex; align-items: center; gap: 0.5rem;">
+            <img src={`${baseUrl}/favicon.svg`} alt="Logo" style="width: 28px; height: 28px; display: block;" />
+            <span style="font-family: var(--font-mono);"><span style="color: var(--accent-hover);">b</span>_</span>
+          </a>
           <div class="nav-links">
             <a href={`${baseUrl}/`}>home</a>
             <a href={`${baseUrl}/blog`}>blog</a>
