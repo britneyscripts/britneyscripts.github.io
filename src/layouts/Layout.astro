@@ -64,6 +64,9 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, ''); // Resolves base pa
             <a href={`${baseUrl}/`}>home</a>
             <a href={`${baseUrl}/blog`}>blog</a>
             <a href={`${baseUrl}/about`}>about</a>
+            <span style="color: var(--border); margin-left: 1rem; margin-right: 0.5rem;">|</span>
+            <a href={`${baseUrl}/blog?lang=en`} class="lang-link" data-lang="en" style="margin-left: 0.25rem; border: none;">en</a>
+            <a href={`${baseUrl}/blog?lang=pt`} class="lang-link" data-lang="pt" style="margin-left: 0.5rem; border: none;">pt</a>
           </div>
         </nav>
       </header>
