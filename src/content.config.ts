@@ -19,7 +19,8 @@ const blogCollection = defineCollection({
     base: "./src/content/blog",
     generateId: ({ entry }) => {
       const fileWithoutExt = entry.replace(/\.md$/, '');
-      return slugify(fileWithoutExt);
+      const parts = fileWithoutExt.split('/');
+      return parts.map(part => slugify(part)).join('/');
     }
   }),
   schema: z.object({
