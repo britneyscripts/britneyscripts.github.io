@@ -42,7 +42,7 @@ const schema = {
 };
 ---
 
-<Layout title={`${entry.data.title} | Bê Acosta`} description={entry.data.description}>
+<Layout title={`${entry.data.title} | Bê Acosta`} description={entry.data.description} ogType="article">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(schema)} />
   <article>
     <div style="margin-bottom: 2rem;">
