@@ -27,11 +27,9 @@ I'm incredibly excited to launch **Britney's Blog**, a dedicated place where I'l
 
 I don't have money to pay a high-end agent-ecosystem research setup. I just have a dream, antigravity, cursor, gemini, google Ai Studio, Google Cloud Credits and a USP student account. 
 
-### Why Hugo?
+### Why Astro?
 
-I wanted a blog that was fast, secure, and purely static. No JavaScript dependencies, no npm bloat (I guess you read the news), and just pure, blazing-fast HTML served by GitHub Pages.
-
-Hugo hits the sweet spot it compiles markdown to HTML in milliseconds. Combined with the **PaperMod** theme, it provides a clean, readable layout right out of the box, which I've customized with a warm, earthy color palette. (Antigravity kill it with this text, isn't?)
+I wanted a blog that was fast, secure, and static first. Astro hits the sweet spot—it compiles markdown to HTML with zero client-side JavaScript by default, keeping it light and incredibly fast. Combined with a clean, terminal-like dark theme customized with the Scorpio Wine Burgundy color palette, it gives me a perfect, readable workspace.
 
 ### What's Next?
 
