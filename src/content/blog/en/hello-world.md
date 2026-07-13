@@ -14,29 +14,27 @@ Welcome to my new space on the internet! 👋
 
 ### Why "Britney's Blog"?
 
-I miss the old internet that forced us to read many articles about a topic. Obviously AI is internalized in my life in a lot of ways but I really miss navigating within an ocean of blogs and deciding to read something new. This blog is kind of a tribute to the old times. It isn’t beautiful and fancy, my idea is just a blog. My blog and I are against AI writing about AI. Is it a metalinguistic blog? Obviously Gemini corrected my English funny mistakes, if you want to know my English level you can interview me for a job to check it by yourself.
+I miss the old internet that forced us to read multiple articles about a single topic. Obviously, AI is deeply integrated into my life in a lot of ways, but I really miss navigating an ocean of blogs and stumbling upon something genuinely new to read. This blog is kind of a tribute to the old times. It isn’t overly beautiful or fancy—the idea is just to be a blog. My blog and I are strictly against AI doing the writing for me. Is it a metalinguistic blog? Maybe. Obviously, Gemini corrects my funny English mistakes (if you want to know my real English level, you'll have to interview me for a job and check for yourself!).
 
-My Twitter handle is @britneyscripts a nod to scripting, automation, and yes, a bit of pop culture fun. But you can call me Eva. This space is where Britney Scripts (the tech persona) meets Eva De Paula (the PM researcher). Think of it as my digital lab notebook meets coffee shop rambling.
+My Twitter handle is @britneyscripts, a nod to scripting, automation, and yes, a bit of pop culture fun. But you can call me Eva. This space is where Britney Scripts (the tech persona) meets Eva De Paula (the PM researcher). Think of it as my digital lab notebook meets coffee shop rambling.
 
 I'm incredibly excited to launch **Britney's Blog**, a dedicated place where I'll be sharing:
 
-- What I'm learning about agent-drive discovery.
-- How I'm applying my findings to my Research. 
-- Lots of content about this topic. It is brand new matter so it has beeing a little noizy. 
-- Being a PM how you can work in real-time with all these changes. 
+- What I'm learning about agent-driven discovery.
+- How I'm applying my findings to my research. 
+- Lots of content about this space. It is a brand new field, so it has been a little noisy lately. 
+- How you can navigate these real-time changes as a PM. 
 
-I don't have money to pay a high-end agent-ecosystem research setup. I just have a dream, antigravity, cursor, gemini, google Ai Studio, Google Cloud Credits and a USP student account. 
+I don't have the funding for a high-end enterprise research setup. I just have a dream, Antigravity, Cursor, Gemini, Google AI Studio, some Google Cloud credits, and a USP student account. 
 
 ### Why Astro?
 
-I wanted a blog that was fast, secure, and static first. Astro hits the sweet spot—it compiles markdown to HTML with zero client-side JavaScript by default, keeping it light and incredibly fast. Combined with a clean, terminal-like dark theme customized with the Scorpio Wine Burgundy color palette, it gives me a perfect, readable workspace.
+I wanted a blog that was fast, secure, and static first. Astro hits the sweet spot—it compiles markdown to HTML with zero client-side JavaScript by default, keeping it light and incredibly fast. Combined with a clean, terminal-like dark theme customized with my Scorpio Wine Burgundy color palette, it gives me a perfect, readable workspace.
 
 ### What's Next?
 
-Stay tuned for my upcoming post, I'm going to try post something every week, but lately I choose a matter and something happens in this new universe and I need to recalibrate my research and verify if I'm not missing something. Sometimes I regret choosing this topic (screaming in despair) but the most of the time I'm really in love with this. 
+Stay tuned for upcoming posts! I'm going to try to post something every week, but lately, every time I choose a topic, something massive happens in this new universe and I have to recalibrate my research to verify I'm not missing anything. Sometimes I regret choosing this topic (screaming in despair), but most of the time, I'm completely in love with it. 
 
-If you want reach me out on twitter @britneyscripts. I almost used "querylatifah" how my username in twitter but I thought Britney is ok. 
-
-
+If you want to reach out, find me on Twitter @britneyscripts. I almost used "querylatifah" as my username, but I figured Britney was okay too. 
 
 *Happy new era of SEO - Discovery - Agents - AI everywhere!*
