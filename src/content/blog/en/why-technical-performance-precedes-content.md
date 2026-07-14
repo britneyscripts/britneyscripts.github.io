@@ -35,7 +35,7 @@ In the classic e-commerce era, Google Search acted as the intermediary, while th
 
 ## Part 1: The Business Reality (The Multi-Agent Ecosystem)
 
-The urgency of this shift is measurable. While ChatGPT remains the undisputed market leader in Brazil, the hyper-accelerated challenger cannot be ignored. According to Ivo (2026), AI-generated traffic in the United States grew 527% during the first five months of 2025. This massive shift is a leading indicator for the global market, especially considering that globally, Gemini reached 900 million monthly active users and captured 27.3% of the market share (DOIT Software, 2026), with Brazil ranking in the Top 5 worldwide for traffic. 
+The urgency of this shift is measurable. While ChatGPT remains the undisputed market leader in Brazil, the hyper-accelerated challenger cannot be ignored. According to a recent analysis by Search Engine Land (2025), AI-generated traffic in the United States grew 527% during the first five months of 2025. This massive shift is a leading indicator for the global market, especially considering that globally, Gemini reached 900 million monthly active users and captured 27.3% of the market share (DOIT Software, 2026), with Brazil ranking in the Top 5 worldwide for traffic. 
 
 But you cannot optimize for just one AI. In the traditional SEO era, let's be honest: "optimizing for search engines" essentially meant optimizing strictly for Google - sorry Internet Explorer. That monopoly mentality no longer works for now. You must build an **Agent-Agnostic** architecture capable of serving multiple LLMs that now act as the primary decision-makers for consumers.
 Why is understanding this important? ChatGPT and Gemini have fundamentally different search, grounding, and content ingestion capabilities, as well as distinct business models. Gemini relies on the Google ecosystem, built over two decades and counting, encompassing Google Shopping, Google Search (and all its search algorithms), Google Ads, and Reviews, which I discussed in my previous article. On the other hand, ChatGPT relies on what it is building on the fly, such as ChatGPT plugins and partnerships with other LLM providers. It is also developing its own search and ads capabilities, but it remains far behind Google's infrastructure in this regard.
@@ -106,10 +106,10 @@ The goal is to move beyond traditional SEO heuristics and build a rigorous, data
 ---
 
 ### References
-1. Accornero, P. F. (2026). *The Shopper Schism: Structural Disaggregation of Consumer and Shopper in AI-Mediated Commerce.* California Management Review.
-2. Baeza-Yates, R., et al. (2024). *Search Engines in an AI Era: The false promise of factual and verifiable source-cited responses.* arXiv preprint arXiv:2410.22349.
-3. DOIT Software. (2026). *Google Gemini Statistics 2026: Usage, Users & Benchmarks*.
+1. Accornero, P. F. (2026). *The Shopper Schism: Structural Disaggregation of Consumer and Shopper in AI-Mediated Commerce.* California Management Review. [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5753722)
+2. Baeza-Yates, R., et al. (2024). *Search Engines in an AI Era: The false promise of factual and verifiable source-cited responses.* arXiv preprint. [arXiv](https://arxiv.org/abs/2410.22349)
+3. DOIT Software. (2026). *Google Gemini Statistics 2026: Usage, Users & Benchmarks*. [DOIT Software](https://doit.software/blog/google-gemini-statistics)
 4. Google Analytics Help. (2026, May 13). *GA4 Release Notes*.
-5. Ivo, D. (2026). *Impactos da IA no comportamento de busca.*
+5. Search Engine Land. (2025). *AI traffic up, SEO rewritten.* [Search Engine Land](https://searchengineland.com/ai-traffic-up-seo-rewritten-459954)
 6. Baidu Research. (2026). *Towards AI Search Paradigm: Architecture of Planners, Executors, and Multi-Agent Orchestration.*
 
