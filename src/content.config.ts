@@ -30,6 +30,11 @@ const blogCollection = defineCollection({
     author: z.string().default('Bê Acosta'),
     tags: z.array(z.string()).optional(),
     draft: z.boolean().default(false),
+    cover: z.object({
+      image: z.string(),
+      alt: z.string().optional()
+    }).optional(),
+    translationOf: z.string().optional(),
   }),
 });
 

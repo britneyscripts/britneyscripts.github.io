@@ -2,6 +2,7 @@
 // src/pages/blog/[slug].astro
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { getReadingTime } from '../../utils/readingTime.js';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog', ({ data }) => {
@@ -40,9 +41,22 @@ const schema = {
     "@id": Astro.url.href
   }
 };
+
+const lang = entry.id.startsWith('pt/') ? 'pt-BR' : 'en';
+const siteUrl = Astro.site ? Astro.site.origin : 'https://britneyscripts.github.io';
+const alternateUrls = [];
+
+if (entry.data.translationOf) {
+  const siblingLang = entry.data.translationOf.startsWith('pt/') ? 'pt-BR' : 'en';
+  alternateUrls.push({ lang: siblingLang, url: `${siteUrl}${baseUrl}/blog/${entry.data.translationOf}` });
+  alternateUrls.push({ lang: lang, url: `${siteUrl}${baseUrl}/blog/${entry.id}` });
+  alternateUrls.push({ lang: 'x-default', url: `${siteUrl}${baseUrl}/blog/${entry.id.startsWith('pt/') ? entry.data.translationOf : entry.id}` });
+}
+
+const ogImage = entry.data.cover ? entry.data.cover.image : undefined;
 ---
 
-<Layout title={`${entry.data.title} | Bê Acosta`} description={entry.data.description} ogType="article">
+<Layout title={`${entry.data.title} | Bê Acosta`} description={entry.data.description} ogType="article" lang={lang} alternateUrls={alternateUrls} ogImage={ogImage}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(schema)} />
   <article>
     <div style="margin-bottom: 2rem;">
@@ -52,14 +66,23 @@ const schema = {
     </div>
 
     <header style="border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2.5rem;">
-      <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
-        {entry.data.date.toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        })}
-        {entry.data.author && ` • By ${entry.data.author}`}
-        <span style="margin-left: 0.75rem; font-weight: bold; color: var(--accent-hover);">{entry.id.startsWith('pt/') ? '🇧🇷 PT' : '🇺🇸 EN'}</span>
+      <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+        <span>
+          {entry.data.date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })}
+        </span>
+        {entry.data.author && (
+          <>
+            <span>•</span>
+            <span>By {entry.data.author}</span>
+          </>
+        )}
+        <span>•</span>
+        <span>⏳ {getReadingTime(entry.body)} min read</span>
+        <span style="font-weight: bold; color: var(--accent-hover); margin-left: auto;">{entry.id.startsWith('pt/') ? '🇧🇷 PT' : '🇺🇸 EN'}</span>
       </div>
       
       <h1 style="border: none; padding: 0; font-size: 2.4rem; line-height: 1.2; margin: 0; font-family: var(--font-sans);">
@@ -76,6 +99,16 @@ const schema = {
         </div>
       )}
     </header>
+
+    {entry.data.cover && (
+      <div style="margin-bottom: 2.5rem;">
+        <img 
+          src={entry.data.cover.image.startsWith('/') ? `${baseUrl}${entry.data.cover.image}` : entry.data.cover.image} 
+          alt={entry.data.cover.alt || entry.data.title} 
+          style="width: 100%; height: auto; border-radius: 4px; border: 1px solid var(--border);" 
+        />
+      </div>
+    )}
 
     <div class="content">
       <Content />

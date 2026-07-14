@@ -3,7 +3,7 @@ title: "Web performance is a tragedy of the commons (and AI agents are the ones 
 date: 2026-05-21T10:00:00-03:00
 draft: false
 tags: ["agentic-commerce","agent-readiness", "ai-agents","schema-org","core-web-vitals","ecommerce-seo","product-management"]
-categories: ["Agentic Commerce","Product Management","Research Notes"]
+
 cover:
   image: "/images/mario-von-rotz.jpg"
   alt: "Playa Maderas, Nicaragua by Mario von Rotz - Unsplash"

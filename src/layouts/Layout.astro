@@ -7,13 +7,17 @@ interface Props {
   description?: string;
   ogImage?: string;
   ogType?: string;
+  lang?: string;
+  alternateUrls?: { lang: string, url: string }[];
 }
 
 const { 
   title = "Bê Acosta | AI, Data & E-commerce Infrastructure", 
   description = "A technical blog and digital notebook on Agentic Commerce, RAG, embeddings, semantic search, and e-commerce infrastructure.",
   ogImage = "/images/blog_featured_image.png",
-  ogType = "website"
+  ogType = "website",
+  lang = "en",
+  alternateUrls = []
 } = Astro.props;
 
 const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, ''); // Resolves base path dynamically, cleaning trailing slash
@@ -25,14 +29,31 @@ const ogImageUrl = `${siteUrl}${cleanOgPath}`;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <!-- Google Tag Manager -->
-    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WX7B28BV');</script>
+    <script is:inline>
+      // Check for URL parameter to enable/disable tracking
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('internal_traffic') === 'true') {
+        localStorage.setItem('exclude_analytics', 'true');
+        alert('Analytics tracking disabled for this browser.');
+      } else if (urlParams.get('internal_traffic') === 'false') {
+        localStorage.removeItem('exclude_analytics');
+        alert('Analytics tracking re-enabled.');
+      }
+
+      // Load GTM only if analytics are not excluded
+      if (localStorage.getItem('exclude_analytics') !== 'true') {
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WX7B28BV');
+      } else {
+        console.log('🛑 Analytics disabled (Internal Traffic)');
+      }
+    </script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -66,6 +87,12 @@ const ogImageUrl = `${siteUrl}${cleanOgPath}`;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;600;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Hreflang Tags -->
+    {alternateUrls.length > 0 && alternateUrls.map(({ lang, url }) => (
+      <link rel="alternate" hreflang={lang} href={url} />
+    ))}
+    
     <slot name="head" />
   </head>
   <body>
@@ -84,8 +111,8 @@ const ogImageUrl = `${siteUrl}${cleanOgPath}`;
             <a href={`${baseUrl}/blog`}>blog</a>
             <a href={`${baseUrl}/about`}>about</a>
             <span style="color: var(--border); margin-left: 1rem; margin-right: 0.5rem;">|</span>
-            <a href={`${baseUrl}/blog?lang=en`} class="lang-link" data-lang="en" style="margin-left: 0.25rem; border: none;">en</a>
-            <a href={`${baseUrl}/blog?lang=pt`} class="lang-link" data-lang="pt" style="margin-left: 0.5rem; border: none;">pt</a>
+            <a href={`${baseUrl}/en/blog`} class="lang-link" data-lang="en" style="margin-left: 0.25rem; border: none;">en</a>
+            <a href={`${baseUrl}/pt/blog`} class="lang-link" data-lang="pt" style="margin-left: 0.5rem; border: none;">pt</a>
           </div>
         </nav>
       </header>

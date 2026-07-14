@@ -3,7 +3,7 @@ title: "Hello World: My New Tech & Scripting Space"
 date: 2026-05-20T10:00:00-03:00
 draft: false
 tags: ["tech", "scripting", "first-post"]
-categories: ["Musings"]
+
 cover:
   image: "/images/blog_featured_image.png"
   alt: "A cozy reading and scripting corner"

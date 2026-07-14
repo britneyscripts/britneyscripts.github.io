@@ -2,6 +2,7 @@
 // src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import { getReadingTime } from '../utils/readingTime.js';
 
 const posts = await getCollection('blog', ({ data }) => {
   return data.draft !== true;
@@ -47,20 +48,18 @@ const schema = {
 
 <Layout title="Bê Acosta | AI, Data & E-commerce Infrastructure">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(schema)} />
-  <div class="hero-container">
+  <div class="bio-card">
+    <img src={`${baseUrl}/images/profile.jpg`} alt="Bê Acosta" class="bio-avatar" />
     <div class="hero-text">
-      <h1 style="font-family: var(--font-mono); margin-bottom: 1rem; border: none; padding: 0; margin-top: 0;">
+      <h1 style="font-family: var(--font-mono); margin-bottom: 0.5rem; border: none; padding: 0; margin-top: 0; font-size: 1.8rem;">
         👋 hi, i'm b_ê acosta
       </h1>
-      <p style="font-size: 1.35rem; color: var(--accent-hover); font-weight: 600; line-height: 1.4; margin-bottom: 1.5rem;">
-        AI is reshaping how we discover and buy online. I'm exploring this new world, and I'd love for you to join me.
+      <p style="font-size: 1.15rem; color: var(--accent-hover); font-weight: 600; line-height: 1.4; margin-bottom: 0.5rem;">
+        Senior PM | AI & Product Discovery in E-commerce
       </p>
-      <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
-        We're moving beyond traditional SEO. The digital shelf we built for human eyes is now being read by autonomous systems. It's a fascinating shift into the era of <strong>Agentic Commerce</strong>, and I'm here to document the journey.
+      <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+        We're moving beyond traditional SEO into the era of <strong>Agentic Commerce</strong>. The digital shelf we built for human eyes is now being read by autonomous systems. I'm exploring this new world, and I'd love for you to join me.
       </p>
-    </div>
-    <div class="profile-avatar-container">
-      <img src={`${baseUrl}/images/profile.jpg`} alt="Bê Acosta" class="profile-avatar" />
     </div>
   </div>
 
@@ -131,24 +130,26 @@ const schema = {
   <section class="posts-section">
     <h2>✍️ Latest Articles</h2>
     {latestPosts.length > 0 ? (
-      <ul class="post-list">
+      <div class="post-grid">
         {latestPosts.map((post) => (
-          <li class="post-item">
-            <div class="post-meta">
-              {post.data.date.toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-              })}
-              <span style="margin-left: 0.75rem; font-weight: bold; color: var(--accent-hover);">{post.id.startsWith('pt/') ? '🇧🇷 PT' : '🇺🇸 EN'}</span>
+          <a href={`${baseUrl}/blog/${post.id}`} class="post-card">
+            <div class="post-card-meta">
+              <span>{post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+              <span>•</span>
+              <span>⏳ {getReadingTime(post.body)} min read</span>
             </div>
-            <h3 class="post-title">
-              <a href={`${baseUrl}/blog/${post.id}`}>{post.data.title}</a>
-            </h3>
-            <p class="post-excerpt">{post.data.description}</p>
-          </li>
+            <h3 class="post-card-title">{post.data.title}</h3>
+            <p class="post-card-excerpt">{post.data.description}</p>
+            {post.data.tags && (
+              <div class="post-card-tags">
+                {post.data.tags.slice(0, 3).map((tag) => (
+                  <span class="post-card-tag">#{tag}</span>
+                ))}
+              </div>
+            )}
+          </a>
         ))}
-      </ul>
+      </div>
     ) : (
       <p style="color: var(--text-muted); margin-top: 1.5rem; font-style: italic;">
         No articles published yet. The first one is coming tomorrow!
@@ -156,7 +157,7 @@ const schema = {
     )}
     {posts.length > 3 && (
       <div style="margin-top: 2rem; font-family: var(--font-mono);">
-        <a href={`${baseUrl}/blog`}>View all articles_</a>
+        <a href={`${baseUrl}/blog`}>View the archive_</a>
       </div>
     )}
   </section>

@@ -37,29 +37,10 @@ All base layouts, pages, and config schemas are already implemented:
 
 ---
 
-## 📋 Active Tasks & Next Steps (Handoff Checklist)
+## 📋 Active Tasks & Next Steps
 
-If you are a newly spawned agent, pick up execution from this checklist:
-
-### [ ] Step 1: Transfer backed-up files into Astro structure
-The original content files are backed up at `/Users/evabettinaacostadepaula/astral/blog_backup/`. Run these commands to move them into the Astro project structure:
-1. Create content directory:
-   `mkdir -p src/content/blog`
-2. Copy posts:
-   `cp /Users/evabettinaacostadepaula/astral/blog_backup/content/posts/*.md src/content/blog/`
-3. Create public images directory:
-   `mkdir -p public/images`
-4. Copy post images:
-   `cp /Users/evabettinaacostadepaula/astral/blog_backup/images/* public/images/`
-
-### [ ] Step 2: Test the build locally
-1. Run local development server to test layout:
-   `npm run dev`
-2. Run build check to verify markdown files compile under config.ts constraints:
-   `npm run build`
-
-### [ ] Step 3: Configure GitHub Actions Workflow
-Create a `.github/workflows/deploy.yml` file to build and push the compiled Astro pages (`dist/` folder) to the `gh-pages` branch on every push.
-
-### [ ] Step 4: Commit and Push
-Commit all files and push them to the `britneyscripts/blog` repository to go live.
+If you are a newly spawned agent, the initial site migration is already complete.
+The current workflow is to:
+1. Maintain existing features.
+2. Publish new markdown posts.
+3. Ensure SEO and structural integrity (e.g., maintaining the tags system and `translationOf` links for multi-lingual content).
