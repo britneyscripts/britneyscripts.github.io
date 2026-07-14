@@ -7,7 +7,7 @@ tags: ["agentic-commerce", "generative-ai", "product-management", "e-commerce"]
 author: "Bê Acosta"
 ---
 
-I hope this article finds you well. I hope this article finds you well. (it's linkedin we need to maintain the corporative language here) 
+I hope this article finds you well. (it's linkedin we need to maintain the corporative language here)
 
 ---
 
