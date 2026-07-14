@@ -111,5 +111,5 @@ The goal is to move beyond traditional SEO heuristics and build a rigorous, data
 3. DOIT Software. (2026). *Google Gemini Statistics 2026: Usage, Users & Benchmarks*. [DOIT Software](https://doit.software/blog/google-gemini-statistics)
 4. Google Analytics Help. (2026, May 13). *GA4 Release Notes*.
 5. Search Engine Land. (2025). *AI traffic up, SEO rewritten.* [Search Engine Land](https://searchengineland.com/ai-traffic-up-seo-rewritten-459954)
-6. Baidu Research. (2026). *Towards AI Search Paradigm: Architecture of Planners, Executors, and Multi-Agent Orchestration.*
+6. Baidu Research. (2026). *Towards AI Search Paradigm: Architecture of Planners, Executors, and Multi-Agent Orchestration.* [arXiv](https://arxiv.org/abs/2506.17188)
 
