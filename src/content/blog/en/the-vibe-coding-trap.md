@@ -1,12 +1,9 @@
 ---
 title: "The vibe coding trap: Why AI Product Management is Getting Harder, Not Easier"
+description: "Vibe coding is touted as a superpower, but for Product Managers, it exposes the fragile foundation of 'fast' delivery and the critical need for deeper evaluation."
 date: 2026-07-22T16:55:00-03:00
 draft: false
 tags: ["ai", "product-management", "vibe-coding"]
-cover:
-  image: "/images/blog_featured_image.png"
-  alt: "The vibe coding trap"
-  caption: "AI Product Management"
 ---
 
 I truly believe that the Product Management discipline has become our very own version of Taylor Swift’s Eras Tour.
