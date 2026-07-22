@@ -14,6 +14,8 @@ Now, as you already know, we are in the AI Era and in this era a PM is expected 
 
 It is a very exhausting and dangerous era, both for companies and for us. Because right now, there is a massive white elephant in the middle of the office: the urgent, unspoken need to know and understand everything behind ‘vibe coding’. If you, like me, meticulously analyze the job description for a PM opportunity you notice that increasingly the words vibe coding, skills, claude are showing up in almost every posting.
 
+---
+
 ## The illusion of the Perfect Prompt
 
 Andrej Karpathy is often called the father of prompt engineering. Lately, he's changed his mind about it not once, but twice.
@@ -28,23 +30,33 @@ Prompt engineering is the way we communicate our ideas or needs to an LLM. There
 
 But look at what happened between those two moments. First, Karpathy told us the real work isn't writing code, right? It's specs, judgment, and evaluation, the output and outcome side of the equation. Then, months later, he casually admits that even his own input has gotten looser, because rambling by voice is faster than typing. Read together, the two moments say the same thing from opposite ends: the input layer (the prompt) is becoming less precious, not because it stopped mattering, but because the actual bottleneck moved somewhere else, to orchestrating agents and judging what they produce. Whether you call that the output, if you're looking at the code, or the outcome, if you're looking at the product, that's the layer nobody is training PMs for and the discussion about the role of a PM in the AI era lies here.
 PMs need to build the output independently of the input they use.
+---
+
 ## The PM vs. Software Engineer Divide
 When I tried to 'vibe code' my first project, I poured in everything I had learned from 10 years of working alongside engineers, my postgraduate studies, and every technical video I had ever watched. It made me reflect on my entire life as an e-commerce PM, student and manager.
 The initial result seemed good enough. I was really proud of myself. But then, I asked Claude to analyze the code acting as a panel of senior engineers. It caught 6 errors. While that sounds like a success, the errors it found were incredibly basic. They were basic for a Software Engineer, but I never thought to write that level of specification into the spec I sent to Gemini in the first place. 
 It is critical to understand that "vibe coding" means two very different things depending on whether you are a PM or a Software Engineer. Maybe the difference is this: for a PM, vibe coding is about building something; for a Software Engineer, it's about guiding how something gets built. Progressively, we see PM job descriptions without the word "technical" in the title, yet they demand a deep and clear understanding of complex technical concepts even if some of it is just AI fluff.
 I don't think companies have fully caught up with what vibe coding actually asks of a PM, the expectation arrived faster than the support to handle it well. Since coming to Brazil, I've been talking with colleagues, and our concerns are fundamentally the same: Okay, I can vibe code a prototype. But what happens next? Do I need to scale this? Am I equipped to discuss the technical implications of this architecture? Can this even be considered a functional, scalable product?
 Ultimately, as PMs, we must understand where in the product cycle AI is actually needed. If we fall into the hype and try to force AI into every part of a product unnecessarily, we risk repeating the mistakes of the past. Just like in the previous eras, if we obsess over the shiny new tools, we lose focus on why we are building what we build in the first place.
+---
+
 ## The Fragile Foundation
 The first naive thought that comes to mind is: I just need to understand LLMs and prompt engineering. It's funny because I used to think that typing "Claude, build a CRM, make no mistakes" could actually be considered a valid prompt.
 Most vibe coding tools do ask clarifying questions before they run off with your credits (I know that you used Fable). Alan Wright, in his article Vibe Coding as a Product Manager: Risks and Opportunities, lists this as one of the real strengths of tools like Lovable, Bolt and Replit: they stop and ask, and they even handle hosting, databases, authentication, and deployment for you, things he says he'd struggle to build from scratch himself.
 I believe that's exactly where the real risk hides. The questions these tools ask are the easy ones, and are trade-offs that you can solve without googling it. The ones that actually matter, really matter, an event-loop blocking fallback, for example, the kind of issue I only caught on a recent project never come up as a prompt. No tool asks "have you considered what happens when this blocks the event loop under load?" That question only surfaces when a PM sits down and reviews the output line by line, at the evaluation stage, with the same rigor a senior engineer would bring. Nowadays we have countless tools to choose from to vibe code, but very few that teach us how to build (or interrogate) a foundation. 
+---
+
 ## The A/B Testing Trap
 What I see most often in the market right now is teams using vibe coding to quickly test value hypotheses directly with users. While some, like Alan Wright, point to this as one of the great opportunities of vibe coding, I have a strong feeling that this is a trap.
 Even when running an A/B test with just 2% to 10% of users, we risk collecting false positives. Why? Because the user response might be inherently tied to the fragile way the prototype was built, rather than the actual value of the feature itself.
 Vibe coding is a fantastic tool for brainstorming, but it cannot replace technical foundations. Because at the end of the day, if the architecture is brittle, the data you collect is dirty. And no amount of vibe coding can fix a broken foundation.
+---
+
 ## The Illusion of "Fast" Delivery
 The words most commonly associated with vibe coding are "delivery" and "fast." But delivering fast is not synonymous with delivering well, even when the deliverable is just a prototype to test a hypothesis in a single feature.
 In reality, "fast" only applies to the LLM generating the initial output. As a PM, you will likely spend an immense amount of time trying to understand and untangle that code before it becomes a viable product. The speed is an illusion reserved for the first draft, not the final release.
+---
+
 ## Where Did the Time Go?
 There's a question underneath all of this that I keep coming back to: if AI genuinely made delivery faster, where did that time go?
 In theory, speed should get reinvested. Teams ship a first draft faster, so they should have more time left over for the things that were always in short supply like deeper discovery, more rigorous validation, and actually understanding the user before building for them. That's the optimistic version.
