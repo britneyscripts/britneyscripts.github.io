@@ -88,7 +88,7 @@ That's the real test of the AI Era for PMs. Not whether we can vibe code a proto
 
 For me, that's become a daily practice, not a one-off reflection. It means going past the code that ships and into a project's actual dependencies. It means, when an LLM like Gemini picks path A over path B to solve something, stopping to ask why and whether there was a path C nobody considered. To do that well, I have to understand what the product actually delivers, how it behaves once it's mine to live with, and what trade-offs sit underneath all of it, measured against the real need of the person the product is for. Sometimes, on my own side projects, that person is just me which turns out to be the strictest client I've ever had.
 
-*(As a side note: I first studied both Edward T. Hall and Stuart Hall back during my Tourism undergraduate days, and it's fascinating to see how their theories on communication contexts and encoding/decoding translate so well to how we interact with LLMs today).*
+*(As a side note: I first studied Edward T. Hall back during my Tourism undergraduate days, and it's fascinating to see how his theories on communication contexts translate so well to how we interact with LLMs today).*
 
 ---
 
@@ -97,4 +97,3 @@ For me, that's become a daily practice, not a one-off reflection. It means going
 2. Wright, A. (2025). *Vibe Coding as a Product Manager: Risks and Opportunities.* [Alanis Wright](https://alaniswright.com/blog/vibe-coding-as-a-product-manager-risks-and-opportunities/)
 3. Wikipedia. *Edward T. Hall*. [Wikipedia](https://en.wikipedia.org/wiki/Edward_T._Hall)
 4. Wikipedia. *High- and low-context cultures*. [Wikipedia](https://en.wikipedia.org/wiki/High-_and_low-context_cultures)
-5. Wikipedia. *Stuart Hall (cultural theorist)*. [Wikipedia](https://en.wikipedia.org/wiki/Stuart_Hall_(cultural_theorist))
