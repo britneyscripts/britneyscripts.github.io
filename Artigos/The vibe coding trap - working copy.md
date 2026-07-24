@@ -12,6 +12,11 @@ Andrej Karpathy is often called the father of prompt engineering. Lately, he’s
 
 A few months ago, Karpathy stood in front of a room at Sequoia’s AI Ascent event and declared vibe coding obsolete. The question that remains, for me, was: for whom? The future, he said, is “agentic engineering”: writing design specs, supervising plans, inspecting diffs, writing tests, building evaluation loops, managing permissions, preserving quality. Jeff Gothelf made the connection that it’s impossible not to think a lot about once you read it: strip the engineering vocabulary from that list, and you’re left describing product management. Deciding what’s worth building, and judging whether what got built actually delivered on it.
 
+Maximize image
+Edit image
+Delete image
+Claude Act
+Your BFF Claude.
 But look closer at that list and it stops being fully PM-friendly territory. Let’s take first “inspecting diffs”, you can’t read a diff, a wall of added and removed lines of code, without already being able to read code. There’s no non-technical version of that one. “Writing tests” is trickier, because it’s really two things wearing the same name: defining what “correct” should look like for the feature, which is a spec a PM can absolutely write, and actually coding the test that checks for it, which can’t be faked without technical fluency. Whether Karpathy meant to or not, that seam is the exact line separating technical from non-technical vibe coding and it’s the ceiling on how far a PM can go alone, right now.
 
 Then, this week, the same Karpathy went viral, again, this time explaining that he’s started passing instructions to LLMs through voice messages, rambling for ten minutes instead of typing out a careful prompt. Someone in the replies called it “the death of prompt engineering”. Give it two weeks and you or your colleagues will be scheduling a 1:1 with Claude to do the same because that’s just how the AI-hype-of-the-week works and I believe we find our new hype.
@@ -28,6 +33,11 @@ When I tried to ‘vibe code’ my first project, I poured in everything I had l
 
 The initial result seemed good enough. I was really proud of myself. But then, I asked Claude to analyze the code acting as a panel of senior engineers. It caught 6 errors. While that sounds like a success, the errors it found were incredibly basic. They were basic for a Software Engineer, but I never thought to write that level of specification into the spec I sent to Gemini in the first place. What was missing wasn’t PRD-level detail, the kind of spec I’ve always known how to write. It was a technical spec: the kind of document that translates requirements into implementation constraints, edge cases, and failure modes. That’s an engineer’s skill, not a PM’s, and vibe coding quietly expects you to have both.
 
+Maximize image
+Edit image
+Delete image
+Vice Coding Debugging
+You've been there. I know it. 
 So, it is critical to understand that “vibe coding” means two very different things depending on whether you are a PM or a Software Engineer. Maybe the difference is this: for a PM, vibe coding is about building something; for a Software Engineer, it’s about guiding how something gets built. Progressively, we see PM job descriptions without the word “technical” in the title, yet they demand a deep and clear understanding of complex technical concepts even if some of it is just AI fluff.
 
 Honestly, I don’t think anyone has fully figured out what vibe coding means for a PM yet, companies included. What’s probably coming is more of a fusion, roles blurring into each other, something Alan Wright touches on too. But surviving that fusion as a PM means climbing a real learning curve into technical fundamentals. I don't know if that makes the job harder in the traditional sense: more hours, more tickets. I know it makes it more complex, and complexity is its own kind of hard. 
@@ -40,9 +50,14 @@ Ultimately, as PMs, we must understand where in the product cycle AI is actually
 The Fragile Foundation
 The first naive thought that comes to mind is: I just need to understand LLMs and prompt engineering. People love to joke that something like “Claude, build a CRM, make no mistakes” isn’t a real prompt. Technically, it is one: a zero-shot prompt, just a catastrophically underspecified one. I’ve seen worse, believe me.
 
-Most vibe coding tools do ask clarifying questions before they run off with your credits (I know you tried Fable and burned a month’s worth of credits in three prompts, tops). Alan Wright, in his article Vibe Coding as a Product Manager: Risks and Opportunities, lists this as one of the real strengths of tools like Lovable, Bolt and Replit: they stop and ask, and they even handle hosting, databases, authentication, and deployment for you, things he says he’d struggle to build from scratch himself.
+Maximize image
+Edit image
+Delete image
+Claude
+I really love this one.
+Most vibe coding tools do ask clarifying questions before they run off with your credits (I know you tried Fable and burned a month’s worth ofcredits in three prompts, tops). Alan Wright, in his article Vibe Coding as a Product Manager: Risks and Opportunities, lists this as one of the real strengths of tools like Lovable, Bolt and Replit: they stop and ask, and they even handle hosting, databases, authentication, and deployment for you, things he says he’d struggle to build from scratch himself.
 
-I believe that’s exactly where the real risk hides. The questions these tools ask are the easy ones, and are trade-offs that you can solve without googling it. The ones that actually matter, really matter—an event-loop blocking fallback, for example, the kind of issue I only caught on a recent project—never comes up as a prompt. No tool asks “have you considered what happens when this blocks the event loop under load?” That question only surfaces when a PM sits down and reviews the output line by line, at the evaluation stage, with the same rigor a senior engineer would bring. Nowadays we have countless tools to choose from to vibe code, but very few that teach us how to build (or interrogate) a foundation.
+I believe that’s exactly where the real risk hides. The questions these tools ask are the easy ones, and are trade-offs that you can solve without googling it. The ones that actually matter, really matter, an event-loop blocking fallback, for example, the kind of issue I only caught on a recent project never comes up as a prompt. No tool asks “have you considered what happens when this blocks the event loop under load?” That question only surfaces when a PM sits down and reviews the output line by line, at the evaluation stage, with the same rigor a senior engineer would bring. Nowadays we have countless tools to choose from to vibe code, but very few that teach us how to build (or interrogate) a foundation.
 
 
 The A/B Testing Trap
@@ -71,3 +86,13 @@ That’s the real test of the AI Era for PMs. Not whether we can vibe code a pro
 For me, that’s become a daily practice, not a one-off reflection. It means going past the code that ships and into a project’s actual dependencies. It means, when an LLM like Gemini picks path A over path B to solve something, stopping to ask why and whether there was a path C nobody considered. To do that well, I have to understand what the product actually delivers, how it behaves once it’s mine to live with, and what trade-offs sit underneath all of it, measured against the real need of the person the product is for. Sometimes, on my own side projects, that person is just me which turns out to be the strictest client I’ve ever had.
 
 (As a side note: I first studied Edward T. Hall back during my Tourism undergraduate days, and it’s fascinating to see how his theories on communication contexts translate so well to how we interact with LLMs today).
+
+
+References
+Gothelf, J. (2025). Karpathy said vibe coding is obsolete. What he described instead is product management. Jeff Gothelf
+
+Wright, A. (2025). Vibe Coding as a Product Manager: Risks and Opportunities. Alanis Wright
+
+Wikipedia. Edward T. Hall. Wikipedia
+
+Wikipedia. High- and low-context cultures. Wikipedia
