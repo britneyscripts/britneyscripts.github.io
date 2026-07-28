@@ -17,6 +17,8 @@ However, applying everything I learned from the course directly to my MBA thesis
 
 The product itself is my take on building the famous "Karpathy Second Brain", but without relying on a black-box magic solution or cloning a template forked from GitHub. I really wanted to deeply understand every moving part of building a RAG system: chunking strategies, embeddings, transformers, vector databases, text splitters, and the whole ecosystem.
 
+---
+
 ### The Content Context 
 
 More than four months ago, I started using the Linear + Obsidian combo, inspired by the hype around Karpathy’s second brain and a tweet explaining how to set it up. At first, my Obsidian vault was populated with required reading from my postgraduate program and a few random notes. Then I started using Zotero (a tool I strongly recommend) to automatically sync PDF highlights directly into Obsidian (I won't delve into the setup details here, as there are plenty of tutorials on that).
@@ -26,6 +28,8 @@ Linear entered the picture as a way to link my MBA project tasks to lectures, bo
 A major detail here is that my notes aren't traditional summaries: they are mostly highlights, open questions, and informal 'mental links'. Another detail is that the notes are written in three different languages at complete random. Depending on my mood, I might be thinking in Portuguese or Spanish, or pushing myself to write in English because it's easier to build knowledge when I remember a paper excerpt directly without translating it first.
 
 I'm mentioned that because understanding the nuances of my own dataset is essential, after all, this is the data entering my knowledge base in ChromaDB. My folder architecture isn't hyper-structured: Obsidian has one folder per MBA class and another for papers, with a dedicated, organized folder for required readings.
+
+---
 
 ### The MVP Base (Or When Everything Started to Fall Apart)
 
@@ -45,12 +49,16 @@ The original `ingest.py` used standard `PyPDFLoader`. On small sample PDFs, it w
 
 That was my first lesson: It's great to provoke errors to learn, but you need to have a trick up your sleeve when guiding an LLM. Before diving into how we fixed this, let's talk about the other two 'discoveries' I made during V1.
 
+---
+
 ### The Single-Collection & Monolingual Traps
 
 Even on the small subset of files that *did* ingest, Version 1 had two massive architectural flaws:
 
 1. **The Single-Collection Mess:** I had dumped my informal trilingual notes (`.md` files) and 500-page textbooks into a single ChromaDB collection. When I asked a quick question about a personal mental link written weeks ago, vector search completely buried my note under heavy textbook chapters. Gemini gave me an answer that was a bizarre hybrid of my personal notes and random academic papers, which was definitely not what I wanted.
 2. **The Monolingual Embedding Trap:** The default embedding model from the IBM course (which I used initially) was trained primarily on English text. But since I jump between Portuguese, Spanish, and English depending on my mood, querying a note in Portuguese against an English paper yielded terrible similarity scores.
+
+---
 
 ### The Pivot: PyMuPDF Streaming & Dual Multilingual Collections
 
@@ -62,6 +70,7 @@ Second, we upgraded our embedding model to `sentence-transformers/paraphrase-mul
 
 Third, we partitioned ChromaDB into two separate collections: `user_notes` (my personal highlights and mental links) and `academic_library` (the PDFs).
 
+---
 
 ### The Ghost Bugs: Cache Stale Handles & The "QueryGym Mystery"
 
@@ -73,6 +82,8 @@ Just when I thought Alexandria was MVP-ready, we hit two "ghost bugs" that almos
 To solve this, we (or rather, Gemini executing my requirements) designed the **`DualHybridRetriever`**: a custom retriever that extracts proper-noun keywords (like `QueryGym`) and runs exact substring matching in parallel with dense vector search. When an exact title or proper noun match is found, it automatically boosts the document to **Rank #1** in Gemini's context window.
 
 I have so much more to share about this topic, but I don't want to make this post too long. I'll write a follow-up on retrieval mechanics soon!
+
+---
 
 ### What I Learned From Building My Own Second Brain
 
