@@ -1,5 +1,5 @@
 ---
-title: "Building Alexandria: The 'Anyone Can Cook' Fallacy, Applied to RAG"
+title: "Building Alexandria: The 'Anyone Can Cook' Myth, Applied to RAG"
 description: "Why LLMs won't turn non-coders into engineers without curiosity, humility, and rigorous problem-solving: lessons learned from converting Jupyter notebooks to Obsidian in a multilingual RAG system."
 date: 2026-08-05T08:30:00-03:00
 draft: false
@@ -7,7 +7,7 @@ tags: ["rag", "ai", "llm", "obsidian", "python", "vibe-coding"]
 author: "Bê Acosta"
 ---
 
-# Building Alexandria: The 'Anyone Can Cook' Fallacy, Applied to RAG
+# Building Alexandria: The 'Anyone Can Cook' Myth, Applied to RAG
 
 ---
 
