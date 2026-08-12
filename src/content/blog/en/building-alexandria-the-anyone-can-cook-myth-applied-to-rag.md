@@ -7,6 +7,7 @@ tags: ["rag", "ai", "llm", "obsidian", "python", "vibe-coding"]
 author: "Bê Acosta"
 ---
 
+
 ### **Context**
 
 In my previous article I started a series of articles about building a RAG system. In summary, I'm building a RAG system to apply new concepts that I'm learning in my Data Science MBA at USP (you can see my project [here](https://github.com/britneyscripts/ghostprod)) and to get more hands-on experience with it, I started an IBM specialization in Coursera. I wrote an article about vibe coding too, you can find it [here](https://britneyscripts.github.io/blog/en/the-vibe-coding-trap/). The article that you’re reading is a synthesis of both. 

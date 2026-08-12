@@ -4,10 +4,6 @@ date: 2026-05-20T10:00:00-03:00
 draft: false
 tags: ["tech", "scripting", "first-post"]
 
-cover:
-  image: "/images/blog_featured_image.png"
-  alt: "A cozy reading and scripting corner"
-  caption: "Scripting with coffee"
 ---
 
 Welcome to my new space on the internet! 👋
