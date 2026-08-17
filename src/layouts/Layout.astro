@@ -26,6 +26,8 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, ''); // Resolves base pa
 const siteUrl = Astro.site ? Astro.site.origin : 'https://britneyscripts.github.io';
 const cleanOgPath = ogImage.startsWith('/') ? ogImage : `/${ogImage}`;
 const ogImageUrl = `${siteUrl}${cleanOgPath}`;
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const sitemapUrl = `${siteUrl}/sitemap-index.xml`;
 ---
 
 <!DOCTYPE html>
@@ -62,6 +64,8 @@ const ogImageUrl = `${siteUrl}${cleanOgPath}`;
     <link rel="icon" type="image/png" sizes="16x16" href={`${baseUrl}/favicon-16x16.png?v=3`} />
     <link rel="shortcut icon" href={`${baseUrl}/favicon.ico?v=3`} />
     <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href={sitemapUrl} />
+    <link rel="canonical" href={canonicalUrl} />
     
     <!-- Primary Meta Tags -->
     <title>{title}</title>
