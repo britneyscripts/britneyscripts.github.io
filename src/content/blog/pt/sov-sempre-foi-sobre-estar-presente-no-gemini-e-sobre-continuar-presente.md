@@ -9,6 +9,8 @@ author: "Bê Acosta"
 
 *Por dentro do mecanismo que recalcula sua marca a cada pergunta seguinte.*
 
+---
+
 Este artigo é vinculado com o projeto de MBA em Ciência de Dados da USP vinculado a citações no Gemini sem ser parte central do mesmo, mas como território adjacente ao meu foco de estudo.
 A base para este artigo é o Gemini instanciado no app e não nas AI Overviews. É importante delimitar o espaço deste artigo dada a diferença, por exemplo, nas possibilidades de medição de resultados das instâncias do Gemini. 
 
@@ -42,7 +44,7 @@ Mas digamos que sua marca foi citada, mas o usuário que mais informação sobre
 
 ---
 
-### Segunda leva de Grounding
+## Segunda leva de Grounding
 
 Para profundizar neste conceito de citações sequenciais vamos olhar para outra patente do Google: [Contextual Estimation of Link information Gain (US20200349181A1)](https://patents.google.com/patent/US20200349181A1/en). Está patente, se você procurar informação no próprio Google, muitas vezes foi reduzida a “crie conteúdo único e com dados próprios”, isto porque a patente menciona redundância diversas vezes, mas vamos olhar a engenharia por trás da patente da Google porque temos algo muito mais específico, dinâmico e contextual.
 
