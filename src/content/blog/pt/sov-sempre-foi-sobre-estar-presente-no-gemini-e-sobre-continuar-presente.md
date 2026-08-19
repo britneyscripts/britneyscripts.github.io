@@ -7,7 +7,7 @@ tags: ["gemini", "seo", "sov", "share-of-model", "usp", "knowledge-graph", "llm"
 author: "Bê Acosta"
 ---
 
-Por dentro do mecanismo que recalcula sua marca a cada pergunta seguinte.
+*Por dentro do mecanismo que recalcula sua marca a cada pergunta seguinte.*
 
 Este artigo é vinculado com o projeto de MBA em Ciência de Dados da USP vinculado a citações no Gemini sem ser parte central do mesmo, mas como território adjacente ao meu foco de estudo.
 A base para este artigo é o Gemini instanciado no app e não nas AI Overviews. É importante delimitar o espaço deste artigo dada a diferença, por exemplo, nas possibilidades de medição de resultados das instâncias do Gemini. 
@@ -19,6 +19,8 @@ Essas informações, como vamos ver mais adiante, vivem dentro do, já mencionad
 O Situational Prompting, aquele onde o cliente descreve sua situação para encontrar um produto que resolva seu problema, torna a dependência do Knowledge Graph mais crítica para uma marca. Se o cliente ali não informar preferência por marca e/ou produto o Gemini nao tem um atalho “Opa, a Márcia quer um sérum O Boticário e quer comparar com Sallve e Principia”, ele precisa inferir candidatos a partir da situação descrita e só depois checar a confiabilidade de cada um no Grafo. 
 
 Então, podemos dizer que a LLM entra neste processo com o papel de curadoria, balanceando, sobretudo, a exatitude entre o match da query e as informações do seu produto ou serviço no seu e-commerce ou marketplace com as informações de reputação e confiabilidade no Knowledge Graph. Quando a Marcia escreve uma query situacional como: “tenho pele mista a oleosa com manchas e preciso de um sérum de uso diário e outro noturno, o que você recomenda?”, a disputa comercial orgânica, por enquanto, não ocorre mais na SERP tradicional e sim pela geometria de espaço vetorial do modelo de linguagem. 
+
+---
 
 ## A Lógica do Espaço Vetorial: Como o Gemini Decide Onde Sua Marca Existe
 
@@ -38,6 +40,8 @@ Passamos pela primeira etapa para responder a Márcia, a etapa do fan-out. A seg
 
 Mas digamos que sua marca foi citada, mas o usuário que mais informação sobre algum ativo do produto, marca ou outra informação. Vamos voltar à query da Márcia: “tenho pele mista a oleosa com manchas e preciso de um sérum de uso diário e outro noturno, o que você recomenda?”. O Gemini responde e ato seguido a próxima query é: “quais destas opções podem ser usadas de dia e de noite?”. A query busca complementar uma informação anterior já verificada pelo usuário, não vou entrar em detalhe sobre o que pode gerar a query complementar, talvez o preço, talvez outra motivação. 
 
+---
+
 ### Segunda leva de Grounding
 
 Para profundizar neste conceito de citações sequenciais vamos olhar para outra patente do Google: [Contextual Estimation of Link information Gain (US20200349181A1)](https://patents.google.com/patent/US20200349181A1/en). Está patente, se você procurar informação no próprio Google, muitas vezes foi reduzida a “crie conteúdo único e com dados próprios”, isto porque a patente menciona redundância diversas vezes, mas vamos olhar a engenharia por trás da patente da Google porque temos algo muito mais específico, dinâmico e contextual.
@@ -46,9 +50,9 @@ A patente divide o mecanismo de busca em dois conjuntos: Set 1 e Set 2. No docum
 
 Então podemos dizer que o IGS é uma métrica estritamente relacional porque a relevância algorítmica do set não é intrínseca ao novo documento (a nova informação) mas sim proporcional a sua capacidade de expandir o repertório informacional já delimitado e consumido (set 1) pelo usuário no estágio anterior. 
 
-Ah Bettina, mas se são dois sets então o score ele só é aplicado a resposta imediatamente anterior? Não, e aqui entra o context window da AI. O Set 1 ele vai engolindo o Set 2 como um PacMan, pense que o Set 2 é fruto do mesmo mecanismo o de buscar novos candidatos utilizando o delta de de conhecimento adquirido inédito para completar o Set 1 que já a esta altura engoliu sequencialmente os Sets 2 que já foram consumidos pelo usuário. 
+Ah Bettina, mas se são dois sets então o score ele só é applied a resposta imediatamente anterior? Não, e aqui entra o context window da AI. O Set 1 ele vai engolindo o Set 2 como um PacMan, pense que o Set 2 é fruto do mesmo mecanismo o de buscar novos candidatos utilizando o delta de de conhecimento adquirido inédito para completar o Set 1 que já a esta altura engoliu sequencialmente os Sets 2 que já foram consumidos pelo usuário. 
 
-Aqui fica claro a dependência do histórico do usuário ou uma sessão contínua. O score não funciona como um selo estático, ele é calculado em tempo de execução baseado no que aquele usuário específico consumiu nos minutos anteriores. Se a Márcia já leu a informação do site X, o site Y ganha score de ganho de informação para a Márcia somente se trouxer algo inédito. 
+Aqui fica claro a dependência do histórico do usuário ou uma sessão contínua. O score não funciona como um selo estático, ele é calculated em tempo de execução baseado no que aquele usuário específico consumiu nos minutos anteriores. Se a Márcia já leu a informação do site X, o site Y ganha score de ganho de informação para a Márcia somente se trouxer algo inédito. 
 
 É razoável supor, lendo o documento do Google, que para manter uma boa experiência de usuário a resposta imediatamente anterior tem um peso maior no cálculo da redundância do que um documento lido pelo usuário anteriormente. Somado a isso, se o usuário mudar a direção da pesquisa o processo de fan-out sobre um reset parcial para se adequar ao context. Em contextos longos isso gera respostas ultra-específicas porque o algoritmo eliminou todo o consenso acumulado no Set 1 ao longo da sessão. 
 
@@ -63,6 +67,8 @@ O mecanismo na SERP é de rankeamento, no Gemini app ou qualquer outra LLM o mec
 3. O total descarte: essas 299 fontes são descartadas, não ranqueadas mas abaixo do documento que preenche o espaço de resposta, elas não existem para aquela sessão do usuário. 
 
 Falamos de preenchimento do espaço vetorial e de SOV vamos detalhar isso na próxima seção. 
+
+---
 
 ## De SOV para SOM™
 
@@ -81,6 +87,8 @@ Se a marca tiver alto SOV digital significa possuir alta densidade no Grafo e o 
 © 2026 Bettina Acosta de Paula. Todos os direitos reservados. 
 Este artigo integra a linha de pesquisa em Ciência de Dados (USP MBA). 
 Citações e reproduções parciais são permitidas mediante atribuição direta do nome da autora e link para o documento original.
+
+---
 
 ## Notas de Rodapé e Referências
 
