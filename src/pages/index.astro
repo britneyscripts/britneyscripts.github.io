@@ -16,6 +16,28 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const siteUrl = Astro.site ? Astro.site.origin : 'https://britneyscripts.github.io';
 
+// Descriptions come from each repo's README; edit freely
+const projects = [
+  {
+    name: 'Ghostprod',
+    url: 'https://github.com/britneyscripts/ghostprod',
+    description: 'Visibility diagnostics for AI agents on product pages. Visible to humans. Invisible to agents.',
+    tags: ['agentic-commerce', 'usp-thesis'],
+  },
+  {
+    name: 'Alexandria',
+    url: 'https://github.com/britneyscripts/alexandria',
+    description: 'Multilingual Hybrid RAG Engine: a grounded "Second Brain" across Obsidian notes and academic PDFs in PT, ES and EN.',
+    tags: ['rag', 'chromadb'],
+  },
+  {
+    name: 'B.A.T.M.A.N.',
+    url: 'https://github.com/britneyscripts/batman',
+    description: 'Bayesian Analytics, Time-Series & Marketing Attribution Network: a forecasting and MMM lab at ICMC/USP.',
+    tags: ['forecasting', 'mmm'],
+  },
+];
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -52,7 +74,7 @@ const schema = {
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(schema)} />
   <section class="intro" style="margin-bottom: 3.5rem;">
     <h1 style="font-family: var(--font-mono); margin-bottom: 0.5rem; border: none; padding: 0; margin-top: 0; font-size: 1.8rem;">
-      👋 hi, i'm b_ê acosta
+      hi, i'm b_ê acosta
     </h1>
     <p style="font-size: 1.15rem; color: var(--accent-hover); font-weight: 600; line-height: 1.4; margin-bottom: 0.5rem;">
       Senior PM | Product Discovery in E-commerce
@@ -63,7 +85,7 @@ const schema = {
     
     <div style="background-color: var(--bg-secondary); border: 1px solid var(--border); padding: 1.5rem; border-radius: 4px; margin: 2rem 0;">
       <h3 style="margin-top: 0; margin-bottom: 1rem; color: var(--text-primary); font-family: var(--font-mono);">
-        🔍 What I study and track here:
+        What I study and track here:
       </h3>
       <p style="font-size: 0.98rem; margin-bottom: 1rem; color: var(--text-muted);">
         This space is where I document my research, tests, and audits on how AI engines discover and retrieve product data:
@@ -90,8 +112,25 @@ const schema = {
     </p>
   </section>
 
+  <section class="projects" style="margin-bottom: 3.5rem;">
+    <h2>Projects</h2>
+    <div class="post-grid">
+      {projects.map((project) => (
+        <a href={project.url} class="post-card" target="_blank" rel="noopener">
+          <h3 class="post-card-title">{project.name}</h3>
+          <p class="post-card-excerpt">{project.description}</p>
+          <div class="post-card-tags">
+            {project.tags.map((tag) => (
+              <span class="post-card-tag">#{tag}</span>
+            ))}
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
   <section class="stack" style="margin-bottom: 3.5rem;">
-    <h2>💻 My Stack</h2>
+    <h2>My Stack</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
       <div style="background-color: var(--bg-secondary); border: 1px solid var(--border); padding: 1.25rem; border-radius: 4px;">
         <h3 style="font-family: var(--font-mono); color: var(--accent-hover); margin-bottom: 0.5rem; margin-top: 0;">[01] Data & AI</h3>
@@ -115,7 +154,7 @@ const schema = {
   </section>
 
   <section class="posts-section">
-    <h2>✍️ Latest Articles</h2>
+    <h2>Latest Articles</h2>
     {latestPosts.length > 0 ? (
       <div class="post-grid">
         {latestPosts.map((post) => (
@@ -123,7 +162,7 @@ const schema = {
             <div class="post-card-meta">
               <span>{post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
               <span>•</span>
-              <span>⏳ {getReadingTime(post.body)} min read</span>
+              <span>{getReadingTime(post.body)} min read</span>
             </div>
             <h3 class="post-card-title">{post.data.title}</h3>
             <p class="post-card-excerpt">{post.data.description}</p>
@@ -150,7 +189,7 @@ const schema = {
   </section>
 
   <section class="connect" style="margin-top: 4rem; border-top: 1px dashed var(--border); padding-top: 2rem;">
-    <h2>🔗 Connect</h2>
+    <h2>Connect</h2>
     <p style="margin-top: 1rem; color: var(--text-muted);">
       Read my thoughts on Substack: <a href="https://substack.com/@evadepaula" target="_blank">@evadepaula</a><br />
       Find me on Twitter/X: <a href="https://twitter.com/britneyscripts" target="_blank">@britneyscripts</a><br />

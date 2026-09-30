@@ -1,43 +1,48 @@
-# Astro Starter Kit: Minimal
+# britneyscripts.github.io
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Source code for [britneyscripts.github.io](https://britneyscripts.github.io), the technical blog of Bê Acosta: essays and research notes on Agentic Commerce, RAG, AI search and e-commerce infrastructure, in English and Portuguese.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Stack
 
-## 🚀 Project Structure
+- [Astro](https://astro.build) static site, no UI framework
+- Vanilla CSS design tokens in `src/styles/global.css`
+- Markdown posts authored in Obsidian and validated by a Zod content schema
+- Deployed to GitHub Pages via GitHub Actions on every push to `main`
 
-Inside of your Astro project, you'll see the following folders and files:
+## Structure
 
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+src/
+├── content/blog/{en,pt}/   # Posts (Markdown). Files starting with _ are ignored.
+├── content.config.ts       # Frontmatter schema: title, description, date, tags, draft, translationOf
+├── layouts/Layout.astro    # Shared <head>, navigation, hreflang
+├── pages/
+│   ├── index.astro         # Home
+│   ├── about.astro
+│   ├── [lang]/blog.astro   # Archive per language, with tag filter
+│   └── blog/[...slug].astro # Post page
+└── styles/global.css
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Writing a post
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Create `src/content/blog/<lang>/<slug>.md`:
 
-Any static assets, like images, can be placed in the `public/` directory.
+```yaml
+---
+title: "Post title"
+description: "One-line summary"
+date: 2026-09-30T19:00:00-03:00
+tags: ["rag", "agentic-commerce"]
+draft: true              # set to false to publish
+translationOf: "en/..."  # optional, links translated versions
+---
+```
 
-## 🧞 Commands
+## Running locally
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+npm install
+npm run dev     # http://localhost:4321
+npm run build   # production build in ./dist
+```

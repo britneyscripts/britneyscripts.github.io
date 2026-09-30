@@ -81,8 +81,8 @@ const ogImage = entry.data.cover ? entry.data.cover.image : undefined;
           </>
         )}
         <span>•</span>
-        <span>⏳ {getReadingTime(entry.body)} min read</span>
-        <span style="font-weight: bold; color: var(--accent-hover); margin-left: auto;">{entry.id.startsWith('pt/') ? '🇧🇷 PT' : '🇺🇸 EN'}</span>
+        <span>{getReadingTime(entry.body)} min read</span>
+        <span style="font-weight: bold; color: var(--accent-hover); margin-left: auto;">{entry.id.startsWith('pt/') ? 'PT' : 'EN'}</span>
       </div>
       
       <h1 style="border: none; padding: 0; font-size: 2.4rem; line-height: 1.2; margin: 0; font-family: var(--font-sans);">
